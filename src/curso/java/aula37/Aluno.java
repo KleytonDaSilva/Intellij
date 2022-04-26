@@ -1,4 +1,6 @@
-package curso.java.aula37;
+package Intellij.src.curso.java.aula37;
+
+import curso.java.aula37.Pessoa;
 
 public class Aluno extends Pessoa {
     private String curso;

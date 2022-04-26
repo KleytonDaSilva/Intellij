@@ -1,5 +1,7 @@
 package curso.java.aula37;
 
+import curso.java.aula37.Pessoa;
+
 public class Professor extends Pessoa {
     private double salario;
     private String nomeCurso;
