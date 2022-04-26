@@ -1,6 +1,6 @@
 package curso.java.aula29;
 
-import curso.java.aula24.Carro;
+import Intellij.src.curso.java.aula24.Carro;
 
 public class Construtores {
     String marca;

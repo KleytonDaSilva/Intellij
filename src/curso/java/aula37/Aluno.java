@@ -1,14 +1,8 @@
 package Intellij.src.curso.java.aula37;
 
-import curso.java.aula37.Pessoa;
-
 public class Aluno extends Pessoa {
     private String curso;
     private double[] notas;
-
-
-
-
 
     public String getCurso() {
         return curso;
@@ -26,11 +20,11 @@ public class Aluno extends Pessoa {
         this.notas = notas;
     }
 
-    public double calcularMedia(){
+    public double calcularMedia() {
         return 0;
     }
 
-    public boolean vereificarAprovado(){
+    public boolean vereificarAprovado() {
         return true;
     }
 
