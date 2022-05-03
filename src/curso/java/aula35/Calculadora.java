@@ -1,5 +1,9 @@
 package curso.java.aula35;
 
+/**
+ * Recursividade é um método que chama ele mesmo, porém precisa de um ponto de parada
+ */
+
 public class Calculadora {
 
     // FATORIAL NÃO RECURSIVO -----
