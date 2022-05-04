@@ -3,7 +3,9 @@ package curso.java.aula29;
 public class Main {
     public static void main(String[] args) {
         Construtores carro = new Construtores();
+/* Instanciando
 
+ */
         carro.marca = "Fiat";
         carro.modelo = "Ducato";
         // carro.numPassageiros = 6;

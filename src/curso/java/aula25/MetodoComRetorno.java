@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula25;
+package curso.java.aula25;
 
 public class MetodoComRetorno {
 

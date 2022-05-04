@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula25;
+package curso.java.aula25;
 
 public class Main {
     public static void main(String[] args){
@@ -12,6 +12,7 @@ public class Main {
         van.numPassageiros = 10;
         van.consumoCombustivel = 0.5;
         van.capCombustivel = 100;
+        van.marca = "fiat";
 
         System.out.println(van.marca);
         System.out.println(van.modelo);

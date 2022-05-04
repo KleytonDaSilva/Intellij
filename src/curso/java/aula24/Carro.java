@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula24;
+package curso.java.aula24;
 
 public class Carro {
     String marca;

@@ -8,14 +8,14 @@ public class Construtor_this {
     double consumoCombustivel;
 
     Construtor_this(){
-        System.out.println("Calsse carro foi instaciada");
+        System.out.println("Classe carro foi instaciada");
         numPassageiros =4;
     }
 
    public Construtor_this(String marca, String modelo, int numPassageiros, double capCombustivel,double consumoCombustivel){
       this.marca = marca;
       this.modelo = modelo;
-      this.numPassageiros = numPassageiros;
+      this.numPassageiros = numPassageiros;// this.numPassageiro referencia o atributo numPassageiros, é para isso que serve
       this.capCombustivel = capCombustivel;
       this.consumoCombustivel =  consumoCombustivel;
        System.out.println("Chamando o construtor com 5 parâmetro");

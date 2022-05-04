@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula37;
+package curso.java.aula37;
 
 public class Pessoa {
     private String nome;

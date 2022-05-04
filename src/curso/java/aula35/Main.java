@@ -1,5 +1,7 @@
 package curso.java.aula35;
 
+import javax.sound.midi.Soundbank;
+
 public class Main {
     public static void main(String[]arg){
         // Não recursividade
@@ -11,5 +13,21 @@ public class Main {
 
         int fatorialR =  Calculadora.fatorialRecursivo(5);
         System.out.println(fatorialR);
+
+
+        System.out.println("----------------------------------------------------------Exercicio01");
+
+            for( int i = 0; i < 30; i ++){
+                System.out.println("( " + i + " ): " + Exercicio01.fibonacci(i) + "\t");
+            }
+
+        System.out.println("-------------------------------------------------------------Exercicio02");
+            for( int i =5; i > 0; i --){
+                System.out.println("(" + i + "):" + Exercicio02.somatorio(i));
+            }
+
+        System.out.println("-------------------------------------------------Exercicio02 Outra forma de fazer");
+
+        System.out.println(Exercicio02.somatorio(5));
     }
 }

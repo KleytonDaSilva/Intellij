@@ -1,10 +1,5 @@
-package Intellij.src.curso.java.aula24;
+package curso.java.aula24;
 
-import com.sun.security.jgss.GSSUtil;
-
-import jdk.swing.interop.SwingInterOpUtils;
-
-import javax.sound.midi.Soundbank;
 import java.util.Date;
 
 public class MainOrientadoObjetos {
