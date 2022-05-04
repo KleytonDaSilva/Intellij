@@ -8,6 +8,8 @@ public class Aula03MainAdicionar {
         //primeira opção
         vetor1.adiciona("01");
 
+      
+
         //segunda opção
         try{
             vetor1.adiciona_novo("3");

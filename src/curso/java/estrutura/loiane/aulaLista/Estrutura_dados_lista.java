@@ -3,6 +3,8 @@ package curso.java.estrutura.loiane.aulaLista;
 public class Estrutura_dados_lista {
     private String[] elementos;
     private int tamanho;
+
+
     public Estrutura_dados_lista(int capacidade){//---
         this.elementos = new String[capacidade];
         this.tamanho =0;
@@ -17,6 +19,7 @@ public class Estrutura_dados_lista {
             }
 
         }
+
     }
     // segunda opção
     public void adiciona_novo(String elemento)throws Exception{
@@ -25,7 +28,7 @@ public class Estrutura_dados_lista {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
         }else{
-            throw new Exception("VERTOR LOTADO!!!!");
+            throw new Exception("VETOR LOTADO!!!!");
         }
     }
 
@@ -42,7 +45,7 @@ public class Estrutura_dados_lista {
 
 
     public String busca (int posicao){
-        if(!(posicao >= 0  && posicao < tamanho)){
+        if(!(posicao >= 0  && posicao < tamanho)){ // posição logica
             throw new IllegalArgumentException("Posição Invalida!!");
         }
         return this.elementos[posicao];
