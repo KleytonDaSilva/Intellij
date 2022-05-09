@@ -41,6 +41,25 @@ public class Estrutura_dados_lista {
         }
         return false;
     }
+    //-----------------------------------------------------------------------Aula 07 Add em qualquer lugar do vetor
+    // aqui vai ser criado um overload= sobre carregar o vetor
+
+    public boolean adicionar_boolean (int posicao, String  elemento){
+
+        if(!(posicao >= 0  && posicao < tamanho)){ // posição logica
+            throw new IllegalArgumentException("Posição Invalida!!"); // verificar se existe espaço, posição logica no vetor
+
+        }
+        // Mover todos os elementos
+        for(int i=this.tamanho-1; i >= posicao; i--){
+            this.elementos[i+1] = this.elementos[i];
+        }
+        this.elementos[posicao] = elemento;
+        this.tamanho ++;
+
+        return true;
+    }
+
     //-----------------------------------------------------------------------Aula 05 de busca de posição
 
 
@@ -54,11 +73,11 @@ public class Estrutura_dados_lista {
 
     public int existe(String elemento){
         for(int i=0; i <this.tamanho; i ++){
-            if(this.elementos[i].equals(elemento)){
+            if(this.elementos[i].equals(elemento)){ // equals para ver se é igual, ==
                 return i;
             }
         }
-        return -1;
+        return -1; // -1 é uma posição que não existe no vetor, por isso se usa para dar false
     }
 
     //---------------------------------------------------------------------- Aula 04 tamanho
