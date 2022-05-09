@@ -1,18 +1,19 @@
 package curso.java.estrutura.loiane.aulaLista;
 
-public class Estrutura_dados_lista {
-    private String[] elementos;
+public class ClasseGenerica {
+
+    private Object[] elementos;
     private int tamanho;
 
-    public Estrutura_dados_lista(int capacidade) {// ---
-        this.elementos = new String[capacidade];
+    public ClasseGenerica(int capacidade) {// ---
+        this.elementos = new Object[capacidade];
         this.tamanho = 0;
     }
 
     // -------------------------------------------------------------- aula 3
     // adicionar no final do vetor
     // primeira opção
-    public void adiciona(String elemento) {// --- verificar quais os elmentos estão null
+    public void adiciona(Object elemento) {// --- verificar quais os elmentos estão null
         for (int i = 0; i <= elementos.length; i++) {
             if (this.elementos[i] == null) {
                 this.elementos[i] = elemento;
@@ -24,7 +25,7 @@ public class Estrutura_dados_lista {
     }
 
     // segunda opção
-    public void adiciona_novo(String elemento) throws Exception {
+    public void adiciona_novo(Object elemento) throws Exception {
 
         if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
@@ -35,7 +36,7 @@ public class Estrutura_dados_lista {
     }
 
     // terceira opção
-    public boolean adicionar_boolean(String elemento) {
+    public boolean adicionar_boolean(Object elemento) {
         this.aumentaCapacidade();
         if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
@@ -48,7 +49,7 @@ public class Estrutura_dados_lista {
     // 07 Add em qualquer lugar do vetor
     // aqui vai ser criado um overload= sobre carregar o vetor
 
-    public boolean adicionar_boolean(int posicao, String elemento) {
+    public boolean adicionar_boolean(int posicao,Object elemento) {
 
         if (!(posicao >= 0 && posicao < tamanho)) { // posição logica
             throw new IllegalArgumentException("Posição Invalida!!"); // verificar se existe espaço, posição logica no
@@ -70,7 +71,7 @@ public class Estrutura_dados_lista {
 
     private void aumentaCapacidade() {
         if (this.tamanho == this.elementos.length) {
-            String[] elementosNovos = new String[this.elementos.length * 2];
+            Object[] elementosNovos = new Object[this.elementos.length * 2];
             for (int i = 0; i < this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
             }
@@ -82,7 +83,7 @@ public class Estrutura_dados_lista {
     // -----------------------------------------------------------------------Aula
     // 05 de busca de posição
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) { // posição logica
             throw new IllegalArgumentException("Posição Invalida!!");
         }
@@ -91,7 +92,7 @@ public class Estrutura_dados_lista {
     // -----------------------------------------------------------------------Aula
     // 06 Se existe o Elemento no vetor
 
-    public int existe(String elemento) {
+    public int existe(Object elemento) {
         for (int i = 0; i < this.tamanho; i++) {
             if (this.elementos[i].equals(elemento)) { // equals para ver se é igual, ==
                 return i;
@@ -138,3 +139,5 @@ public class Estrutura_dados_lista {
     }
 
 }
+
+

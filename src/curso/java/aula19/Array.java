@@ -34,4 +34,8 @@ public class Array {
             System.out.println(temp);
         }
     }
+
+    public static T[] newInstance(Class<T> tipoclasse, int capacidade) {
+        return null;
+    }
 }
