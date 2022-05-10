@@ -35,9 +35,9 @@ public class Main {
         System.out.println("-------------------------------");
         System.out.println(x == y);
         System.out.println("***** PESSOA *****");
-        SegundaAula pes = new SegundaAula(1, "Kleyton");
+        Aula02 pes = new Aula02(1, "Kleyton");
         System.out.println(pes); // --->"pes" é o endereço de memoria
-        SegundaAula pes2 = new SegundaAula(2, "José");
+        Aula02 pes2 = new Aula02(2, "José");
         System.out.println(pes2);
         System.out.println(pes == pes2);
 

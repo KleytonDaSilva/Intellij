@@ -1,10 +1,10 @@
 package curso.java.estrutura_dados_KaneChan;
 
-public class SegundaAula {
+public class Aula02 {
     private int id;
     private String nome;
 
-    public SegundaAula(int id, String nome) {
+    public Aula02(int id, String nome) {
         super();
         this.id = id;
         this.nome = nome;
