@@ -42,4 +42,9 @@ public class Main {
         System.out.println(pes == pes2);
 
     }
+
+    //------------------------------------------------------------------------------------------------ Exercicio aula 07
+     AulasListaLigadas<PessoalAula07> listapessoas = new AulasListaLigadas<PessoalAula07>();
+
+     
 }

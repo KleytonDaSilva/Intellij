@@ -31,6 +31,32 @@ public class AulasListaLigadas <T> {
         return this.tamanho == 0;
     }
 
+    private Nodo<T> recuperar( int posicao){
+        if(posicao >= tamanho()){
+            throw new IllegalArgumentException(String.format("Ops!, posição invalida", posicao));
+        }
+        Nodo<T> resultado = null;
+        for(int i =0; i <= posicao; i ++){
+            if(i == 0){
+                resultado = this.primeiroNo;
+            }else{
+                resultado = resultado.getProximo();
+            }
+        }
+        return resultado;
+    }
+
+    public T recuperarElemento(int posicao){
+        Nodo<T> no = recuperar(posicao);
+        if(no != null){
+            return no.getElemento();
+        }
+        return null;
+    }
+    private int tamanho(){
+        return this.tamanho;
+    }
+
        @Override
        public String toString(){
            if(ehVazia()){
