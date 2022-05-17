@@ -100,12 +100,12 @@ public class ExercicioEstruturaDeDados {
 
     public <T> int ultimoIndice(T elemento) {
         int ultimoPosicao = -1;
-        for (int i = 0; i < this.tamanho; i++) {
+        for (int i = this.tamanho-1; i > 0; i--) {
             if (this.elementos[i].equals(elemento)) {
-                ultimoPosicao = i;
+              return i;
             }
         }
-        return ultimoPosicao;
+        return -1;
     }
 
     // Exercicio 01 Melhore a clsese Lista e implemente o método contém
