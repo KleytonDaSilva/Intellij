@@ -1,4 +1,4 @@
-package curso.java.estrutura_dados_KaneChan;
+package CursodeEstruturaDeDadosCursosKaneChan.estrutura_dados_KaneChan;
 
 public class Aula02 {
     private int id;

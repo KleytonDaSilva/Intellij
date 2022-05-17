@@ -1,6 +1,5 @@
-package curso.java.estrutura_dados_KaneChan;
+package CursodeEstruturaDeDadosCursosKaneChan.estrutura_dados_KaneChan;
 
-import java.rmi.server.SocketSecurityException;
 import java.util.Scanner;
 
 public class Main {
