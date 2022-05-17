@@ -37,8 +37,8 @@ public class PessoalAula07 {
         this.idade = idade;
     }
 
-    @Override
+   /* @Override
     public String toString(){
-        return pessoa 
-    }
+        return pessoa;
+    }*/
 }
