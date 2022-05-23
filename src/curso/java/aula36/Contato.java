@@ -28,4 +28,7 @@ public class Contato {
     public void setTelefones(Telefone[] telefones) {
         this.telefones = telefones;
     }
+    public String obterInfo() {
+        return null;
+    }
 }

@@ -48,5 +48,37 @@ public class Main {
         System.out.println("-----------------------------------------------------------------------Exercicio01");
 
         Scanner scan = new Scanner(System.in);
+
+        System.out.println("Nome da Agenda: ");
+        String nome = scan.nextLine();
+
+        Exercicio01 agenda = new Exercicio01();
+        ContatoExercicio[] contatos = new ContatoExercicio[3];
+
+        for(int i =0; i < 3; i ++){
+            System.out.println("Entre com as informações do contatos: " + (i+1));
+            ContatoExercicio c = new ContatoExercicio();
+                
+            System.out.println("Informe o Nome: ");
+            nome = scan.nextLine();
+            c.setNome(nome);
+
+            System.out.println("Informe o Telefone: ");
+            String telefone = scan.nextLine();
+            c.setTelefone(telefone);
+
+            System.out.println("Informe o E-mail: ");
+            String email = scan.nextLine();
+            c.setEmail(email);
+
+            contatos[i] = c;
+
+        }
+
+        agenda.setContatos(contatos);
+
+        if(agenda != null){
+            System.out.println(agenda.obterInfo());
+        }
     }
 }
