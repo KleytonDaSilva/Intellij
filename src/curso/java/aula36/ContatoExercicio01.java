@@ -1,6 +1,6 @@
 package curso.java.aula36;
 
-public class ContatoExercicio {
+public class ContatoExercicio01 {
     private String nome;
     private String email;
     private String telefone;

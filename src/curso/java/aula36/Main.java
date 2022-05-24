@@ -53,11 +53,11 @@ public class Main {
         String nome = scan.nextLine();
 
         Exercicio01 agenda = new Exercicio01();
-        ContatoExercicio[] contatos = new ContatoExercicio[3];
+        ContatoExercicio01[] contatos = new ContatoExercicio01[3];
 
         for(int i =0; i < 3; i ++){
             System.out.println("Entre com as informações do contatos: " + (i+1));
-            ContatoExercicio c = new ContatoExercicio();
+            ContatoExercicio01 c = new ContatoExercicio01();
                 
             System.out.println("Informe o Nome: ");
             nome = scan.nextLine();
@@ -80,5 +80,9 @@ public class Main {
         if(agenda != null){
             System.out.println(agenda.obterInfo());
         }
+
+        System.out.println("-------------------------------------------------------------------------Exercicio02");
+     
+        
     }
 }

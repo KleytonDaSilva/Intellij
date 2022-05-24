@@ -32,7 +32,7 @@ public class Exercicio01 {
     /**
      * @param contatos2 the contatos to set
      */
-    public void setContatos(ContatoExercicio[] contatos2) {
+    public void setContatos(ContatoExercicio01[] contatos2) {
         this.contatos = contatos;
     }
 
