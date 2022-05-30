@@ -1,24 +1,25 @@
 package curso.java.aula36;
 
 public class professorExercicio02 {
-    private String nome;
+    private String nomeEx;
     private String departamento;
     private String email;
 
     
 
+
     /**
-     * @return String return the nome
+     * @return String return the nomeEx
      */
-    public String getNome() {
-        return nome;
+    public String getNomeEx() {
+        return nomeEx;
     }
 
     /**
-     * @param nome the nome to set
+     * @param nomeEx the nomeEx to set
      */
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeEx(String nomeEx) {
+        this.nomeEx = nomeEx;
     }
 
     /**
@@ -47,6 +48,10 @@ public class professorExercicio02 {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String obterInfo(){
+        return "Professor= " + nomeEx;
     }
 
 }

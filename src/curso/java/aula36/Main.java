@@ -55,10 +55,10 @@ public class Main {
         Exercicio01 agenda = new Exercicio01();
         ContatoExercicio01[] contatos = new ContatoExercicio01[3];
 
-        for(int i =0; i < 3; i ++){
-            System.out.println("Entre com as informações do contatos: " + (i+1));
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Entre com as informações do contatos: " + (i + 1));
             ContatoExercicio01 c = new ContatoExercicio01();
-                
+
             System.out.println("Informe o Nome: ");
             nome = scan.nextLine();
             c.setNome(nome);
@@ -77,12 +77,69 @@ public class Main {
 
         agenda.setContatos(contatos);
 
-        if(agenda != null){
+        if (agenda != null) {
             System.out.println(agenda.obterInfo());
         }
 
         System.out.println("-------------------------------------------------------------------------Exercicio02");
-     
-        
+
+        System.out.println("Entre com o nome do Curso: ");
+        String nomeCurString = scan.nextLine();
+
+        System.out.println("Entre com o horário do curso");
+        String horario = scan.nextLine();
+
+        System.out.println("Entre com nome do professor: ");
+        String nomeEx = scan.nextLine();
+
+        System.out.println("Entre com departamento do Professor: ");
+        String departamento = scan.nextLine();
+
+        System.out.println("Entre com o email do professor: ");
+        String email = scan.nextLine();
+
+        CursoExercicio02 curso = new CursoExercicio02();
+        curso.setNomeCur(nomeCurString);
+        curso.setHorario(horario);
+
+
+        professorExercicio02 professor = new professorExercicio02();
+        professor.setNomeEx(nomeEx);
+        professor.setDepartamento(departamento);
+        professor.setEmail(email);
+
+        curso.setProfessor(professor);
+   
+
+
+        AlunoExercicio02[] alunos =  new AlunoExercicio02[5];
+        System.out.println("----- Alunos -----");
+        for(int i =0; i < 5; i ++){
+            System.out.println("Entre com nome do aluno : " + (i + 1));
+                String nomeEx2 = scan.nextLine();
+
+            System.out.println("Entre com a matricula do aluno");
+                String matricula = scan.nextLine();
+
+            double[] notas = new double[4];
+
+            for(int j=0; j < 4; j ++){
+                System.out.println("Entre com as notas:  " + (j +1));
+                notas[j] = scan.nextDouble();
+            }
+            AlunoExercicio02 aluno = new AlunoExercicio02();
+
+            aluno.setNomeEx2(nomeEx2);
+            aluno.setMatricula(matricula);
+            aluno.setNotas(notas);
+
+
+            alunos[i] = aluno;
+    
+                
+        }
+
+            curso.setAluno(alunos);
+
     }
 }
