@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula40;
 
 public class Pessoa {
     private String nome;
@@ -47,5 +47,10 @@ public class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String obterEtiquetaEndereco(){ // Metodo na classe pai, as classes filhos tbm pode herdar 
+
+        return endereco;
     }
 }

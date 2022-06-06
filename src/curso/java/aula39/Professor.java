@@ -1,6 +1,6 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula39;
 
-public class Professor extends Pessoa {
+public class Professor {
     private double salario;
     private String nomeCurso;
 
@@ -25,5 +25,4 @@ public class Professor extends Pessoa {
     public double calcularSalarioLiquido(){
         return 0;
     }
-
 }

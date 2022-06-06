@@ -1,10 +1,18 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula39;
 
 public class Pessoa {
     private String nome;
     private String endereco;
     private String telefone;
     private String cpf;
+    /**
+     * PUBLIC: todos tem acesso
+     * 
+     * PRIVATE: Só propria classe pode ver, encapsulamento 
+     * 
+     * PROTECTED: somente o pacote tema acesso.
+     */
+    protected  String nomeVisibilidade;
 
     public Pessoa(){
 

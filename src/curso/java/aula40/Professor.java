@@ -1,4 +1,4 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula40;
 
 public class Professor extends Pessoa {
     private double salario;
@@ -24,6 +24,14 @@ public class Professor extends Pessoa {
 
     public double calcularSalarioLiquido(){
         return 0;
+    }
+    public String obterEtiquetaEndereco(){ // aqui o metodo herda da classe pai com algumas modificações 
+                                          // aqui está sobre pondo o metodo da classe Pessoa 
+
+        String s = "Endereço do Professor ";
+        s +=this.getEndereco();
+
+            return s;
     }
 
 }

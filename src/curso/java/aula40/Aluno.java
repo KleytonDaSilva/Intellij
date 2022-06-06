@@ -1,6 +1,8 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula40;
 
-public class Aluno extends Pessoa {
+import Intellij.src.curso.java.aula38.Pessoa;
+
+public class Aluno extends Pessoa{
     private String curso;
     private double[] notas;
     
@@ -39,6 +41,14 @@ public class Aluno extends Pessoa {
 
     public boolean vereificarAprovado() {
         return true;
+    }
+    public String obterEtiquetaEndereco(){ // aqui o metodo herda da classe pai com algumas modificações 
+                                           // aqui está sobre pondo o metodo da classe Pessoa 
+
+        String s = "Endereço do aluno: ";
+        s +=this.getEndereco();
+
+        return s;
     }
 
 

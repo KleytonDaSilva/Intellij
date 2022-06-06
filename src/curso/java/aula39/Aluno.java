@@ -1,10 +1,15 @@
-package Intellij.src.curso.java.aula38;
+package Intellij.src.curso.java.aula39;
 
 public class Aluno extends Pessoa {
     private String curso;
     private double[] notas;
     
- 
+    public void verificarAcesso(){
+    
+        this.nomeVisibilidade ="vrrt";
+        super.nomeVisibilidade = "verdade";
+    }
+
     public Aluno(){
         super();
     }
@@ -40,7 +45,5 @@ public class Aluno extends Pessoa {
     public boolean vereificarAprovado() {
         return true;
     }
-
-
 
 }
