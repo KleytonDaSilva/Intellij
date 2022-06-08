@@ -6,7 +6,12 @@ public class Main {
         Aluno aluno = new Aluno();
         Professor professor = new Professor();
 
+        // OU
+
+        //Pessoa aluno = new Aluno(); --> superClasse ou polimorfimos 
+
         aluno.setCpf("062.001.679-58");
+        System.out.println(aluno.getCpf());
 
     }
 }

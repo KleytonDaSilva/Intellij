@@ -1,40 +1,43 @@
 package curso.java.estrutura.loiane.aulaLista.ExerciciosEstrutura;
 
 public class ExercicioEstruturaDeDados {
-    private  Object[] elementos;
+    private Object[] elementos;
     private int tamanho;
 
-
-    public ExercicioEstruturaDeDados(int capacidade){
+    public ExercicioEstruturaDeDados(int capacidade) {
         this.elementos = new Object[capacidade];
         this.tamanho = 0;
     }
     // aula 02
-    /* public void adiciona(String elemento){
-        for(int i =0; i < this.elementos.length; i++){
-            if(this.elementos[i] == null ){
-                this.elementos[i] = elemento;
-                break;
-            }
-        }
-    }*/
+    /*
+     * public void adiciona(String elemento){
+     * for(int i =0; i < this.elementos.length; i++){
+     * if(this.elementos[i] == null ){
+     * this.elementos[i] = elemento;
+     * break;
+     * }
+     * }
+     * }
+     */
     // aula03
-   /* public void adiciona(String elemento) throws Exception{
+    /*
+     * public void adiciona(String elemento) throws Exception{
+     * 
+     * if(this.tamanho < this.elementos.length){
+     * this.elementos[this.tamanho] = elemento;
+     * this.tamanho ++;
+     * }else{
+     * throw new Exception("Vetor cheio");
+     * }
+     * 
+     * }
+     */
+    // aula04
 
-        if(this.tamanho <  this.elementos.length){
-            this.elementos[this.tamanho] = elemento;
-            this.tamanho ++;
-        }else{
-            throw new Exception("Vetor cheio");
-        }
-
-    }*/
-    //aula04
-
-    public boolean adiciona( Object elemento) {
+    public boolean adiciona(Object elemento) {
         this.aumentaCapacidade();
-        if(this.tamanho < this.elementos.length){
-            this.elementos[this.tamanho] =elemento;
+        if (this.tamanho < this.elementos.length) {
+            this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
         }
@@ -42,15 +45,15 @@ public class ExercicioEstruturaDeDados {
     }
 
     // aula07 OVERLOAD
-    public boolean adiciona(int posicao, Object elemento){
-        if(!(posicao >= 0 && posicao < tamanho)){
+    public boolean adiciona(int posicao, Object elemento) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
-        //parte da aula08
+        // parte da aula08
         this.aumentaCapacidade();
         // mover todos os elementos
-        for(int i =this.tamanho-1; i >= posicao; i--){
-            this.elementos[i+1] =  this.elementos[i];
+        for (int i = this.tamanho - 1; i >= posicao; i--) {
+            this.elementos[i + 1] = this.elementos[i];
         }
         this.elementos[posicao] = elemento;
         this.tamanho++;
@@ -60,68 +63,91 @@ public class ExercicioEstruturaDeDados {
 
     // aula08
 
-    private void aumentaCapacidade(){
-        if(this.tamanho == this.elementos.length){
+    private void aumentaCapacidade() {
+        if (this.tamanho == this.elementos.length) {
             Object[] elementosNovos = new String[this.elementos.length * 2];
-            for(int i =0; i  < this.elementos.length; i++){
+            for (int i = 0; i < this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
             }
             this.elementos = elementosNovos;
         }
     }
 
-    //aula05
-    public Object buscar(int posicao){
-        if(!(posicao >=0 && posicao < tamanho)){
+    // aula05
+    public Object buscar(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("posição inválida");
         }
         return this.elementos[posicao];
     }
 
-
-    public int tamanho(){
+    public int tamanho() {
         return this.tamanho;
     }
 
-    //aula 06
+    // aula 06
 
-    public int busca ( Object elemento){
+    public int busca(Object elemento) {
         // busca sequencial, vai de elemento a elemnte até achar
-        for(int i =0; i < this.tamanho; i++){
-            if( this.elementos[i].equals(elemento)){
+        for (int i = 0; i < this.tamanho; i++) {
+            if (this.elementos[i].equals(elemento)) {
                 return i;
             }
         }
         return -1;// não existe, por isso -1
     }
+    // Exercicio 02 Melhorar a classe Lista er implemente o metodo ultimo indice
 
-    //AULA09
+    public <T> int ultimoIndice(T elemento) {
+        int ultimoPosicao = -1;
+        for (int i = this.tamanho-1; i > 0; i--) {
+            if (this.elementos[i].equals(elemento)) {
+              return i;
+            }
+        }
+        return -1;
+    }
+
+    // Exercicio 01 Melhore a clsese Lista e implemente o método contém
+    public <T> boolean contem(T elemento) {
+        /*
+         * int posicao = busca(elemento);
+         * if(posicao > -1){
+         * return true;
+         * }else{
+         * return false;
+         * }
+         */
+        return busca(elemento) > -1;
+    }
+
+    // AULA09
     //
-    public void remove (int posicao){
-        if(!(posicao >=0 && posicao < tamanho)){
+    public void remove(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("posição inválida");
         }
-        for(int i =posicao; i < this.tamanho-1; i++){
-            this.elementos[i] = this.elementos[i+1];
+        for (int i = posicao; i < this.tamanho - 1; i++) {
+            this.elementos[i] = this.elementos[i + 1];
         }
-        this.tamanho --;
+        this.tamanho--;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
 
         StringBuilder s = new StringBuilder();
         s.append("[");
 
-        for(int i =0; i < this.tamanho-1; i++){
+        for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.elementos[i]);
             s.append(" , ");
         }
-        if(this.tamanho > 0){
-            s.append(this.elementos[this.tamanho-1]);
+        if (this.tamanho > 0) {
+            s.append(this.elementos[this.tamanho - 1]);
         }
 
-        s.append( " ] ");
-        return  s.toString();
+        s.append(" ] ");
+        return s.toString();
     }
 }
