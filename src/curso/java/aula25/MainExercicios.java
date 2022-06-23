@@ -6,7 +6,7 @@ public class MainExercicios {
     public static void main(String[] args){
         //-----------------------------------------------------------------------------EXERCICIO01
         System.out.println("-----------------------------------------------------------Exercicio01");
-        Exercicio01 lampadas =  new Exercicio01();
+        ContaBancariaExercicio01 lampadas =  new ContaBancariaExercicio01();
 
         lampadas.tipoLampada = "led";
         lampadas.temperatura = 500;

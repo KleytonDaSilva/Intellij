@@ -57,7 +57,7 @@ public class Exercicio02 {
 
     public double sacar(){
         saldo = saldo - saque;
-    System.out.println("Você sacou: " + saldo );
+        System.out.println("Você sacou: " + saldo );
         return saldo;
     }
     void consultarSaldo(){

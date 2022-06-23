@@ -25,7 +25,7 @@ public class MainOrientadoObjetos {
 
         //------------------------------------------------------------------------------------------EXERCICIO01
         System.out.println("------------------------------------------------------------------------EXERCICIO01");
-        Exercicio01 led = new Exercicio01();
+        ContaBancariaExercicio01 led = new ContaBancariaExercicio01();
 
         led.tipoLampada = "Led";
         led.temperatura = 5000;

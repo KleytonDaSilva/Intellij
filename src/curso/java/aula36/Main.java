@@ -52,7 +52,7 @@ public class Main {
         System.out.println("Nome da Agenda: ");
         String nome = scan.nextLine();
 
-        Exercicio01 agenda = new Exercicio01();
+        ContaBancariaExercicio01 agenda = new ContaBancariaExercicio01();
         ContatoExercicio01[] contatos = new ContatoExercicio01[3];
 
         for (int i = 0; i < 3; i++) {

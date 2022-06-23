@@ -17,7 +17,7 @@ public class main {
 
         System.out.println("-----------------------------------------------------------Exercicio01");
 
-        Exercicio01 exer01 = new Exercicio01(false);
+        ContaBancariaExercicio01 exer01 = new ContaBancariaExercicio01(false);
 
         System.out.println("A lâmpada está : " + exer01.isStatus());
 

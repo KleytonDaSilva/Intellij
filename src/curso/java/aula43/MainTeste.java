@@ -15,8 +15,20 @@ public class MainTeste {
         String s1 = "kleyton";
         String s2 = "Marcos";
 
-        System.out.println(s1 == s2);// OU 
+        System.out.println(s1 == s2);// OU
         System.out.println(s1.equals(s2));// modo equals
+
+        System.out.println("------------------------------------------------------------Exercicio01");
+        ContaBancariaExercicio01 conta = new ContaBancariaExercicio01();
+
+        conta.setNomeCliente("Kleyton da Silva");
+        conta.setNumConta(4545);
+        conta.depositoDinheiro(450);
+
+        System.out.println(conta.getNomeCliente());
+        System.out.println(conta.getNumConta());
+        System.out.println(conta.getSaldo());
+
     }
 
 }
