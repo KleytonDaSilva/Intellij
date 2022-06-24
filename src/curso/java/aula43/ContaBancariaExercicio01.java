@@ -1,14 +1,14 @@
 package Intellij.src.curso.java.aula43;
 /*
  * Exercicio01
- * elabore uma classe  ContaBancaria com os seguintes atributos 
- * -nomeCliente
- * -numConta
- * -saldo
+ * elabore uma classe  ContaBancaria com os seguintes atributos ok
+ * -nomeCliente  ok
+ * -numConta     ok
+ * -saldo        ok
  * 
  * E os seguintes métodos:
- * -sacar( o saldo não pode ficar negativo)
- * -depositar
+ * -sacar( o saldo não pode ficar negativo) ok
+ * -depositar ok
  */
 
 public class ContaBancariaExercicio01 {
