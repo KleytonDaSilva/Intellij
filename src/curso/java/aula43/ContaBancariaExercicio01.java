@@ -16,7 +16,6 @@ public class ContaBancariaExercicio01 {
     private String nomeCliente;
     private int numConta;
     private double saldo;
-    
 
     public String getNomeCliente() {
         return this.nomeCliente;
@@ -42,19 +41,20 @@ public class ContaBancariaExercicio01 {
         this.saldo = saldo;
     }
 
-     double sacarDinheiro(double saque) {
+    double sacarDinheiro(double saque) {
+
         
-        saldo = saque - saque;
-        if (saldo <= 0) {
+        if (saque > saldo) {
             System.out.println("Saldo insulficiênte " + saldo);
         } else {
             System.out.println("Saque Autorizado: " + saldo);
+            saldo = saldo - saque;
         }
 
         return saldo;
     }
 
-     double depositoDinheiro(double deposito) {
+    double depositoDinheiro(double deposito) {
 
         System.out.println("Depositado: ");
         saldo = saldo + deposito;

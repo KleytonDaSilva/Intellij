@@ -6,8 +6,16 @@ package Intellij.src.curso.java.aula43;
  * - Atualizar o saldo
  */
 
-public class ContaEspecialExercicio01 extends ContaBancariaExercicio01{
+public class ContaEspecialExercicio01 extends ContaBancariaExercicio01 {
 
     private double limite;
-    
+
+    double clienteEspecial(double saldo) {
+        if (saldo >=  3000) {
+            limite = saldo * 3;
+            System.out.println("Você possui um limite: " + limite);
+        }
+        return limite;
+    }
+
 }

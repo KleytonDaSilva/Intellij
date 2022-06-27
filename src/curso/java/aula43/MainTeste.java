@@ -24,6 +24,8 @@ public class MainTeste {
         conta.setNomeCliente("Kleyton da Silva");
         conta.setNumConta(4545);
         conta.depositoDinheiro(450);
+        conta.depositoDinheiro(3000);
+        conta.sacarDinheiro(440);
 
         System.out.println(conta.getNomeCliente());
         System.out.println(conta.getNumConta());
